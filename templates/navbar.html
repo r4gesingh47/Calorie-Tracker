@@ -1,0 +1,77 @@
+{% comment %}
+<nav>
+  <a href="{% url 'home' %}">Home</a>
+  <a href="{% url 'features:intake' %}">Calorie Intake</a>
+  <a href="{% url 'features:goals' %}">Calorie Goals</a>
+  {% if user.is_authenticated %}
+  <a href="{% url 'authentication:profile' %}">{{user.username}}</a>
+  <a href="{% url 'authentication:logout' %}">Logout</a>
+  {% else %}
+  <a href="{% url 'authentication:login'%}">Login</a>
+  <a href="{% url 'authentication:register' %}">Register</a>
+  {% endif %} {% endcomment %} {% comment %}
+</nav>
+{% endcomment %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a
+    class="navbar-brand p-2 mr-2 bg-dark text-light rounded border border-primary"
+    href="{% url 'home' %}"
+    >Health Tracker</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link p-2 mr-2 bg-info text-light rounded border border-primary"
+          href="{% url 'features:intake' %}"
+          >Calorie Intake<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link p-2 mr-2 bg-info text-light rounded border border-primary"
+          href="{% url 'features:goals' %}"
+          >Calorie Goals</a
+        >
+      </li>
+    </ul>
+    <span class="navbar-link">
+      {% if user.is_authenticated %}
+      <a
+        class="p-2 mr-2 bg-info text-light rounded border border-primary"
+        href="{% url 'authentication:profile' %}"
+        >{{user.username}}</a
+      >
+      <a
+        class="p-2 mr-2 bg-info text-light rounded border border-primary"
+        href="{% url 'authentication:logout' %}"
+        >Logout</a
+      >
+      {% else %}
+      <a
+        class="p-2 mr-2 bg-info text-light rounded border border-primary"
+        class="mr-2"
+        href="{% url 'authentication:login_user' %}"
+        >Login</a
+      >
+      <a
+        class="p-2 mr-2 bg-info text-light rounded border border-primary"
+        href="{% url 'authentication:register' %}"
+        >Register</a
+      >
+      {% endif %}
+    </span>
+  </div>
+</nav>

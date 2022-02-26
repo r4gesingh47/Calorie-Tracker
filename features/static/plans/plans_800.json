@@ -1,0 +1,73 @@
+[
+    {
+        "veg": [
+            {
+                "type": "Fruit",
+                "quantity": "1/2 Cup",
+                "ingredients": [
+                    "1 Cup raw Banana Slices",
+                    "1,5 cup Almonds",
+                    "1 cup 100% Apple juice"
+                ]
+            },
+            {
+                "type": "Vegetables",
+                "quantity": "2/3 Cup",
+                "ingredients": [
+                    "1 cup raw or cooked/canned vegetables;",
+                    "1 cup 100% vegetable juice"
+                ]
+            },
+            {
+                "type": "Grains",
+                "quantity": "1 and 3/4 Ounces",
+                "ingredients": [
+                    "1 slice bread",
+                    "1 ounce ready-to-eat cereal"
+                ]
+            },
+            {
+                "type": "Protein",
+                "quantity": "2 Ounces",
+                "ingredients": [
+                    "1 Tbsp peanut butter",
+                    "¼ cup cooked beans, peas, or lentils"
+                ]
+            }
+        ],
+        "non_veg": [
+            {
+                "type": "Fruit",
+                "quantity": "1/2 Cup",
+                "ingredients": [
+                    "1 Cup raw,frozen,or cooked/canned fruit",
+                    "1,5 cup dried fruit"
+                ]
+            },
+            {
+                "type": "Vegetables",
+                "quantity": "2/3 Cup",
+                "ingredients": [
+                    "1 cup raw or cooked/canned vegetables;",
+                    "2 cups leafy salad greens"
+                ]
+            },
+            {
+                "type": "Grains",
+                "quantity": "1 and 3/4 Ounces",
+                "ingredients": [
+                    "1 slice bread",
+                    "½ cup cooked rice, pasta, or cereal"
+                ]
+            },
+            {
+                "type": "Protein",
+                "quantity": "2 Ounces",
+                "ingredients": [
+                    "1 ounce seafood, lean meat, or poultry",
+                    "1 egg"
+                ]
+            }
+        ]
+    }
+]

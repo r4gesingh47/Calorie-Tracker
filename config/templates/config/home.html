@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %}
+<!---->
+{% block navbar %} {% include 'navbar.html' %} {% endblock navbar %}
+<!---->
+{% block content %}
+<div class="container mt-5 text-center">
+  <ul class="list-group">
+    <li class="list-group-item">Your Personal Health Tracker</li>
+    <li class="list-group-item">Set your Goals !! and get custom diet plan</li>
+    <li class="list-group-item">Track your Calorie Intake</li>
+    <li class="list-group-item">And many more features</li>
+  </ul>
+</div>
+<div class="container text-center">
+  {% if user.is_authenticated %}
+  <p class="lead">
+    Hey <b>{{user.username}}</b> start by measuring you calorie intake.
+  </p>
+  {% else %}
+  <form action="{% url 'authentication:register'%}">
+    <button type="submit" class="btn btn-outline-success">
+      Get Started Now
+    </button>
+  </form>
+
+  {% endif %}
+</div>
+{% endblock content %}
